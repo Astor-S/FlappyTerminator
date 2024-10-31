@@ -6,13 +6,16 @@ using UnityEngine;
 public class Bullet : MonoBehaviour, IDestroyable<Bullet>
 {
     [SerializeField] private Bullet _bulletPrefab;
+    [SerializeField] private float _damage;
     [SerializeField] private float _lifeTime = 10f;
     [SerializeField] private float _speed;
 
-    public event Action<Bullet> Destroyed;
-
     private Rigidbody2D _rigidbody2D;
     private WaitForSeconds _waitLifeTime;
+
+    public event Action<Bullet> Destroyed;
+
+    public float Damage => _damage;
 
     private void Awake()
     {

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Mover))]
-public class Player : MonoBehaviour
+public class Player : Spaceship
 {
     [SerializeField] private CollisionDetector _collisionDetector;
     [SerializeField] private Shooter _shooter;

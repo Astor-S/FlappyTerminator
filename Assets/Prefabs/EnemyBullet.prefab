@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 9115122692196089199}
+  _damage: 1
   _lifeTime: 10
   _speed: 10
 --- !u!212 &-856831085508310735

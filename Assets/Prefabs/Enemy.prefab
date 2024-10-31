@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 7218254994795030076}
   - component: {fileID: 7378628598076291875}
   - component: {fileID: 3874124050885828565}
+  - component: {fileID: 6163284535793083086}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -110,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5f6a4be31764e46be40c8bdfcb14ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 6163284535793083086}
   _shooter: {fileID: 6760772981810933896}
   _lifeTime: 40
   _repeatShoot: 2
@@ -299,3 +301,16 @@ PolygonCollider2D:
       - {x: 1.29, y: -0.5}
       - {x: 1.24, y: -0.37}
   m_UseDelaunayMesh: 0
+--- !u!114 &6163284535793083086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5643633335633663570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1fe8fa8cb641f46a24d708701cb097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxValue: 1

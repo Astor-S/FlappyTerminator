@@ -11,7 +11,7 @@ public class Spawner<T> : MonoBehaviour where T : MonoBehaviour, IDestroyable<T>
     protected virtual void Awake()
     {
         _pool = new Pool<T>(
-            CreateObject);
+            () => Instantiate(_objectPrefab));
     }
 
     public virtual T Spawn(Vector2 position)
@@ -29,12 +29,5 @@ public class Spawner<T> : MonoBehaviour where T : MonoBehaviour, IDestroyable<T>
         obj.Destroyed -= OnObjectDestroyed;
         _pool.Release(obj);
         obj.gameObject.SetActive(false);
-    }
-
-    private T CreateObject()
-    {
-        T newObj = Instantiate(_objectPrefab);
-
-        return newObj;
     }
 }

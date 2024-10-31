@@ -28,12 +28,12 @@ public class EnemySpawner : Spawner<Enemy>
 
         while (enabled)
         {
-            GetRandomSpawnPosition();
+            ChooseRandomSpawnPoint();
             yield return _waitRepeatRate;
         }
     }
 
-    private void GetRandomSpawnPosition()
+    private void ChooseRandomSpawnPoint()
     {
         int minRange = 0;
         int randomIndex = Random.Range(minRange, _spawnPoints.Length);

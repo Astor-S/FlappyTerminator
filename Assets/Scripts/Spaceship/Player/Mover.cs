@@ -24,7 +24,7 @@ public class Mover : MonoBehaviour
         Reset();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
     }

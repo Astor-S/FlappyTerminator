@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDestroyable<Enemy>
+public class Enemy : Spaceship, IDestroyable<Enemy>
 {
     [SerializeField] private Shooter _shooter;
     [SerializeField] private float _lifeTime = 40f;
