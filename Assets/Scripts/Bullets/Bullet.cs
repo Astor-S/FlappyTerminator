@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour, IDestroyable<Bullet>
 {
-    [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private float _damage;
     [SerializeField] private float _lifeTime = 10f;
     [SerializeField] private float _speed;

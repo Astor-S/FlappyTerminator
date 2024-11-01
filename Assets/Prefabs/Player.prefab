@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8473381581219624562}
   - component: {fileID: 2368168042775525545}
   - component: {fileID: -3962423905768433964}
+  - component: {fileID: 4984163421018682286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79442961c3dc7443afbe360a566fe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 4984163421018682286}
   _collisionDetector: {fileID: 9076158290452373959}
   _shooter: {fileID: 2368168042775525545}
   _inputReader: {fileID: 8473381581219624562}
@@ -140,6 +142,19 @@ MonoBehaviour:
   _objectPrefab: {fileID: 5922669111286450455, guid: 6959ace11c319c141a2d3668275f0165, type: 3}
   _poolCapacity: 20
   _poolMaxSize: 20
+--- !u!114 &4984163421018682286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630673765270964961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1fe8fa8cb641f46a24d708701cb097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxValue: 1
 --- !u!1 &6932447802390030233
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6932447802390030233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
