@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemySpawner : Spawner<Enemy>
 {
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private ScoreCounter _scoreCounter;
     [SerializeField] private float _startDelay = 5f;
     [SerializeField] private float _repeatRate = 10f;
 
@@ -39,6 +40,7 @@ public class EnemySpawner : Spawner<Enemy>
         int randomIndex = Random.Range(minRange, _spawnPoints.Length);
         Transform spawnPoint = _spawnPoints[randomIndex];
 
-        Spawn(spawnPoint.position);
+        Enemy enemy = Spawn(spawnPoint.position);
+        _scoreCounter.Set(enemy);
     }
 }
